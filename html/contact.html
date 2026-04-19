@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AnimeZone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- contact css  -->
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="anime-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">AnimeZone</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+  
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                                        <div class="invalid-feedback">Please enter your name</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+                                <div class="invalid-feedback">Please enter a subject</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your message" required></textarea>
+                                <div class="invalid-feedback">Please enter your message</div>
+                            </div>
+                            
+                            <div class="form-group form-check mb-4">
+                                <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                                <label class="form-check-label" for="newsletter">Subscribe to our anime newsletter</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="content">
+                                <h5>Our Location</h5>
+                                <p>123 Mathbah ,maen  District<br> Sanaa, Yemen </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="content">
+                                <h5>Phone Number</h5>
+                                <p>+967 77777777</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="content">
+                                <h5>Email Address</h5>
+                                <p>info@animezone.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="content">
+                                <h5>Working Hours</h5>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Toast Notification -->
+    <div class="toast-container">
+        <div class="toast" id="contactToast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="toast-header">
+                <strong class="me-auto">AnimeZone</strong>
+                <small>Just now</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Thanks, your message has been sent! We'll get back to you soon.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AnimeZone</h5>
+                    <p>Your ultimate anime resource for reviews, news, and recommendations.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 AnimeZone. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    
+    <!-- Contact Page Specific JS -->
+    <script>
+        $(document).ready(function() {
+            // Form validation and submission
+            $("#contactForm").on("submit", function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = $("#name").val().trim();
+                const email = $("#email").val().trim();
+                const subject = $("#subject").val().trim();
+                const message = $("#message").val().trim();
+                
+                // Validate form
+                let isValid = true;
+                
+                if (name === "") {
+                    $("#name").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#name").removeClass("is-invalid").addClass("is-valid");
+                }
+                
+                if (email === "" || !isValidEmail(email)) {
+                    $("#email").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#email").removeClass("is-invalid").addClass("is-valid");
+                }
+                
+                if (subject === "") {
+                    $("#subject").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#subject").removeClass("is-invalid").addClass("is-valid");
+                }
+                
+                if (message === "") {
+                    $("#message").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#message").removeClass("is-invalid").addClass("is-valid");
+                }
+                
+                // If form is valid, show toast and reset form
+                if (isValid) {
+                    // Show toast notification
+                    const toast = new bootstrap.Toast(document.getElementById('contactToast'));
+                    toast.show();
+                    
+                    // Reset form
+                    $("#contactForm")[0].reset();
+                    $(".form-control").removeClass("is-valid");
+                    
+                    // In a real application, you would send the form data to a server here
+                    console.log("Form submitted successfully!", {
+                        name,
+                        email,
+                        subject,
+                        message,
+                        newsletter: $("#newsletter").is(":checked")
+                    });
+                }
+            });
+            
+            // Email validation function
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Real-time validation
+            $("#name, #subject, #message").on("input", function() {
+                const value = $(this).val().trim();
+                if (value !== "") {
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                } else {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                }
+            });
+            
+            $("#email").on("input", function() {
+                const value = $(this).val().trim();
+                if (value !== "" && isValidEmail(value)) {
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                } else if (value !== "") {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                } else {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AnimeZone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- login css  -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <a href="index.html" class="back-to-home">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+    
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-row">
+                <div class="auth-image">
+                    <div class="auth-image-content">
+                        <h2>Welcome Back!</h2>
+                        <p>Log in to access your personalized anime recommendations, save your favorite series, and join our vibrant community of anime enthusiasts.</p>
+                        <p>Don't have an account yet?</p>
+                        <a href="register.html" class="btn btn-outline-light">Create Account</a>
+                    </div>
+                </div>
+                
+                <div class="auth-form">
+                    <h3>Login to AnimeZone</h3>
+                    
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group password-field">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                            <span class="password-toggle" id="passwordToggle">
+                                <i class="far fa-eye"></i>
+                            </span>
+                            <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-auth">Login</button>
+                    </form>
+                    
+                    <div class="auth-links">
+                        <p>Don't have an account? <a href="register.html">Register here</a></p>
+                    </div>
+                    
+                    <div class="social-login">
+                        <p>Or login with</p>
+                        <div class="social-icons">
+                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="google"><i class="fab fa-google"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="discord"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    
+    <!-- Login Page Specific JS -->
+    <script>
+        $(document).ready(function() {
+            // Toggle password visibility
+            $("#passwordToggle").on("click", function() {
+                const passwordField = $("#password");
+                const passwordIcon = $(this).find("i");
+                
+                if (passwordField.attr("type") === "password") {
+                    passwordField.attr("type", "text");
+                    passwordIcon.removeClass("fa-eye").addClass("fa-eye-slash");
+                } else {
+                    passwordField.attr("type", "password");
+                    passwordIcon.removeClass("fa-eye-slash").addClass("fa-eye");
+                }
+            });
+            
+            // Form validation
+            $("#loginForm").on("submit", function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const email = $("#email").val().trim();
+                const password = $("#password").val().trim();
+                
+                // Validate form
+                let isValid = true;
+                
+                // Email validation
+                if (email === "" || !isValidEmail(email)) {
+                    $("#email").addClass("is-invalid");
+                    $("#emailError").show();
+                    isValid = false;
+                } else {
+                    $("#email").removeClass("is-invalid").addClass("is-valid");
+                    $("#emailError").hide();
+                }
+                
+                // Password validation
+                if (password === "" || password.length < 6) {
+                    $("#password").addClass("is-invalid");
+                    $("#passwordError").show();
+                    isValid = false;
+                } else {
+                    $("#password").removeClass("is-invalid").addClass("is-valid");
+                    $("#passwordError").hide();
+                }
+                
+                // If form is valid, submit
+                if (isValid) {
+                    // In a real application, you would send the form data to a server here
+                    console.log("Login form submitted successfully!", {
+                        email,
+                        password,
+                        rememberMe: $("#rememberMe").is(":checked")
+                    });
+                    
+                    // Redirect to home page (for demo purposes)
+                    window.location.href = "index.html";
+                }
+            });
+            
+            // Real-time validation
+            $("#email").on("input", function() {
+                const value = $(this).val().trim();
+                if (value !== "" && isValidEmail(value)) {
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    $("#emailError").hide();
+                } else if (value !== "") {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    $("#emailError").show();
+                } else {
+                    $(this).removeClass("is-valid");
+                    $("#emailError").hide();
+                }
+            });
+            
+            $("#password").on("input", function() {
+                const value = $(this).val().trim();
+                if (value !== "" && value.length >= 6) {
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    $("#passwordError").hide();
+                } else if (value !== "") {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    $("#passwordError").show();
+                } else {
+                    $(this).removeClass("is-valid");
+                    $("#passwordError").hide();
+                }
+            });
+            
+            // Email validation function
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+</body>
+</html>

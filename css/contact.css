@@ -1,0 +1,134 @@
+ /* Contact Page Specific Styles */
+        .contact-form-section {
+            padding: 80px 0;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form .form-control {
+            border-radius: 10px;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e9e9e9;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(138, 43, 226, 0.25);
+        }
+        
+        .contact-form textarea.form-control {
+            min-height: 150px;
+        }
+        
+        .contact-form .btn-submit {
+            padding: 12px 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 30px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+        
+        .contact-info {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            height: 100%;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info-item i {
+            font-size: 24px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-info-item .content h5 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info-item .content p {
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+        
+        .social-links {
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Toast Notification */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+        
+        .toast {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        
+        .toast.show {
+            opacity: 1;
+        }
+        
+        .toast-header {
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .toast-body {
+            padding: 15px;
+        }

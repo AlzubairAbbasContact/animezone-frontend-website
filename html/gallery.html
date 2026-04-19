@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - AnimeZone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- gallery css  -->
+     <link rel="stylesheet" href="../css/gallery.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="anime-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">AnimeZone</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Anime Gallery</h1>
+            <p class="lead">Explore our collection of stunning anime artwork and wallpapers</p>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="slider-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Featured Wallpapers</h2>
+            <p class="text-center mb-5">Check out our selection of high-quality anime wallpapers</p>
+            
+            <div class="gallery-slider">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <img src="../images/slider1.jpg" alt="Anime Wallpaper 1">
+                    <div class="caption">
+                        <h4>Epic Battle Scene</h4>
+                        <p>From the popular series "Attack on Titan"</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="../images/slider2.jpg" alt="Anime Wallpaper 2">
+                    <div class="caption">
+                        <h4>Cherry Blossoms</h4>
+                        <p>Peaceful scene from "Your Name"</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="../images/slider3.jpg" alt="Anime Wallpaper 3">
+                    <div class="caption">
+                        <h4>Magical Forest</h4>
+                        <p>Enchanting scenery from "Princess Mononoke"</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <img src="../images/slider4.jpg" alt="Anime Wallpaper 4">
+                    <div class="caption">
+                        <h4>Futuristic City</h4>
+                        <p>Cyberpunk aesthetic from "Ghost in the Shell"</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+                
+                <!-- Navigation Dots -->
+                <div class="dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Categories Section -->
+    <section class="gallery-categories py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Browse by Category</h2>
+            <div class="category-filters text-center">
+                <button class="btn category-btn active" data-filter="all">All</button>
+                <button class="btn category-btn" data-filter="action">Action</button>
+                <button class="btn category-btn" data-filter="romance">Romance</button>
+                <button class="btn category-btn" data-filter="fantasy">Fantasy</button>
+                <button class="btn category-btn" data-filter="scifi">Sci-Fi</button>
+            </div>
+            
+            <div class="row gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="action">
+                    <div class="gallery-item">
+                        <img src="../images/gallery1.jpg" alt="Action Anime">
+                        <div class="overlay">
+                            <h5>Demon Slayer</h5>
+                            <p>Tanjiro and Nezuko fighting demons</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="romance">
+                    <div class="gallery-item">
+                        <img src="../images/gallery2.jpg" alt="Romance Anime">
+                        <div class="overlay">
+                            <h5>Your Lie in April</h5>
+                            <p>Kousei and Kaori under cherry blossoms</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="fantasy">
+                    <div class="gallery-item">
+                        <img src="../images/gallery3.jpg" alt="Fantasy Anime">
+                        <div class="overlay">
+                            <h5>Howl's Moving Castle</h5>
+                            <p>The magical castle floating in the sky</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="scifi">
+                    <div class="gallery-item">
+                        <img src="../images/gallery4.jpg" alt="Sci-Fi Anime">
+                        <div class="overlay">
+                            <h5>Akira</h5>
+                            <p>Neo-Tokyo cityscape at night</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="action">
+                    <div class="gallery-item">
+                        <img src="../images/gallery5.jpg" alt="Action Anime">
+                        <div class="overlay">
+                            <h5>My Hero Academia</h5>
+                            <p>Deku using his quirk in battle</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="fantasy">
+                    <div class="gallery-item">
+                        <img src="../images/gallery6.jpg" alt="Fantasy Anime">
+                        <div class="overlay">
+                            <h5>Spirited Away</h5>
+                            <p>Chihiro and Haku flying through the night</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="romance">
+                    <div class="gallery-item">
+                        <img src="../images/gallery7.jpg" alt="Romance Anime">
+                        <div class="overlay">
+                            <h5>Weathering With You</h5>
+                            <p>Hodaka and Hina on a rainy day</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="scifi">
+                    <div class="gallery-item">
+                        <img src="../images/gallery8.jpg" alt="Sci-Fi Anime">
+                        <div class="overlay">
+                            <h5>Psycho-Pass</h5>
+                            <p>Futuristic law enforcement in action</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 9 -->
+                <div class="col-md-4 col-sm-6 gallery-item-wrapper" data-category="action">
+                    <div class="gallery-item">
+                        <img src="../images/gallery9.jpg" alt="Action Anime">
+                        <div class="overlay">
+                            <h5>One Punch Man</h5>
+                            <p>Saitama preparing for battle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AnimeZone</h5>
+                    <p>Your ultimate anime resource for reviews, news, and recommendations.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 AnimeZone. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    
+    <!-- Gallery Page Specific JS -->
+    <script>
+        $(document).ready(function() {
+            // Category filtering
+            $(".category-btn").on("click", function() {
+                var filter = $(this).data("filter");
+                
+                // Update active button
+                $(".category-btn").removeClass("active");
+                $(this).addClass("active");
+                
+                // Filter gallery items
+                if (filter === "all") {
+                    $(".gallery-item-wrapper").show();
+                } else {
+                    $(".gallery-item-wrapper").hide();
+                    $(".gallery-item-wrapper[data-category='" + filter + "']").show();
+                }
+            });
+            
+            // Manual slider navigation with dots
+            $(".gallery-slider .dot").on("click", function() {
+                var index = $(this).data("index");
+                showSlide(index);
+            });
+            
+            // Function to show specific slide
+            function showSlide(index) {
+                // Hide all slides
+                $(".gallery-slider .slide").removeClass("active");
+                
+                // Show selected slide
+                $(".gallery-slider .slide").eq(index).addClass("active");
+                
+                // Update dots
+                $(".gallery-slider .dot").removeClass("active");
+                $(".gallery-slider .dot").eq(index).addClass("active");
+            }
+        });
+    </script>
+</body>
+</html>
